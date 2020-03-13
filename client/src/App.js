@@ -22,14 +22,18 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <div className="header">
         <h1>Women's World Cup</h1>
         <ModeToggle />
+        </div>
 
+        <div className="players-container">
         {this.state.players ? (
           this.state.players.map(player => <Player player={player} />)
         ) : (
           <p>Loading</p>
         )}
+        </div>
       </div>
     );
   }
