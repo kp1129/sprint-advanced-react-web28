@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Player from "./Player";
+import ModeToggle from './ModeToggle';
 import "./App.css";
 
 class App extends React.Component {
@@ -22,6 +23,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Women's World Cup</h1>
+        <ModeToggle />
 
         {this.state.players ? (
           this.state.players.map(player => <Player player={player} />)
